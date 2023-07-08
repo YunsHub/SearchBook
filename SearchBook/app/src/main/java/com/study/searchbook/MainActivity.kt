@@ -25,6 +25,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
         initNavigation()
     }
 
+
     fun getResultSearch() {
         bookViewModel.getBooks(client_id, client_secret, "안드로이드")
     }
@@ -35,10 +36,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
         navController = navHostFragment.navController
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu, menu)
-        return true
-    }
+//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+//        menuInflater.inflate(R.menu.menu, menu)
+//        return true
+//    }
 
     // 홈 화면에서 뒤로가기 2번 클릭 시 종료
     var waitTime = 0L
